@@ -1,0 +1,290 @@
+/* Fraunces - Variable Font */
+@font-face {
+  font-family: "Fraunces";
+  src: url("./assets/fonts/fraunces/Fraunces-VariableFont_SOFT_WONK_opsz_wght.ttf")
+    format("truetype");
+}
+
+/* Fraunces - SemiBold */
+@font-face {
+  font-family: "Fraunces";
+  font-weight: 600; /* Ajusta el valor de peso según las características de la fuente */
+  src: url("./assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf")
+    format("truetype");
+}
+
+/* Manrope - Variable Font */
+@font-face {
+  font-family: "Manrope";
+  font-weight: 600; /* Ajusta el valor de peso según las características de la fuente */
+  src: url("./assets/fonts/manrope/Manrope-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+/* Manrope - Regular */
+@font-face {
+  font-family: "Manrope";
+  src: url("./assets/fonts/manrope/static/Manrope-Regular.ttf")
+    format("truetype");
+}
+
+:root {
+  --Button-green: #44ffa1;
+  --Purple: #24053e;
+  --Gray: #fcf8ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+main {
+  overflow: hidden;
+}
+
+.fondo {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  &::after {
+    border-radius: 50%;
+    content: "";
+    height: 300px;
+    position: absolute;
+    bottom: -68px;
+    left: -10%;
+    width: 120%;
+  }
+}
+button {
+  border: none;
+  width: 161px;
+  height: 61px;
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.18px;
+  background-color: var(--Button-green);
+  color: var(--Purple);
+  border: 2px var(--Button-green) solid;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: transparent;
+    color: var(--Button-green);
+  }
+}
+nav {
+  top: 57.08px;
+  max-width: 1109px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 0 16px;
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  & > img {
+    width: 95.76px;
+  }
+  & > p {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.18px;
+    cursor: pointer;
+    &:hover {
+      color: var(--Button-green);
+    }
+    &::after {
+      content: "";
+      height: 3px;
+      width: 138px;
+      position: absolute;
+      bottom: -5px;
+      right: 16px;
+      background-color: var(--Button-green);
+    }
+  }
+}
+.top {
+  background-color: var(--Purple);
+  height: 661px;
+  z-index: 2;
+  &::after {
+    background-color: var(--Purple);
+    z-index: -1;
+  }
+  .left {
+    position: absolute;
+    top: 116px;
+    left: -139px;
+  }
+  .right {
+    position: absolute;
+    top: 314px;
+    right: -49px;
+  }
+  .phone {
+    position: absolute;
+    max-width: 767px;
+    width: 100%;
+    top: 454px;
+    right: 0;
+    left: 0;
+    padding-left: 49px;
+    margin: 0 auto;
+    z-index: 3;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & h1 {
+      max-width: 635px;
+      margin: 0 auto;
+      margin-top: 146px;
+      font-family: "Fraunces";
+      font-size: 80px;
+      line-height: 80px;
+      text-align: center;
+      margin-bottom: 37px;
+      & span {
+        &::before {
+          content: "";
+          height: 3px;
+          width: 245px;
+          margin-top: 80px;
+          position: absolute;
+          background-color: var(--Button-green);
+        }
+      }
+    }
+  }
+}
+.cards {
+  background-color: var(--Gray);
+  height: 802px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  padding-top: 324px;
+  gap: 26px;
+  box-sizing: border-box;
+  &::after {
+    background-color: var(--Gray);
+    z-index: -1;
+  }
+  .card {
+    width: 354px;
+    .number {
+      width: 54px;
+      height: 54px;
+      margin: 0 auto;
+      border: solid 1px #584d62;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Fraunces";
+      font-weight: 600;
+      font-size: 24px;
+      color: var(--Purple);
+      margin-bottom: 56px;
+    }
+    & h2 {
+      font-family: "Fraunces";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 40px;
+      text-align: center;
+      color: var(--Purple);
+      margin-bottom: 28px;
+    }
+    & p {
+      font-family: "Manrope";
+      font-size: 18px;
+      line-height: 32px;
+      text-align: center;
+      color: var(--Purple);
+    }
+  }
+}
+.user-review {
+  position: relative;
+  width: 1112px;
+  height: 647.74px;
+  margin: 0 auto;
+  margin-top: 200px;
+  & > img {
+    position: absolute;
+    width: 477px;
+    left: 0;
+  }
+  .card-review {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 64px;
+    margin-top: 173px;
+    right: 0;
+    width: 730px;
+    height: 413px;
+    background-color: var(--Purple);
+    & h2 {
+      font-family: "Fraunces";
+      font-weight: 600;
+      font-size: 56px;
+      line-height: 64px;
+    }
+    & p {
+      font-family: "Manrope";
+      font-size: 18px;
+      line-height: 32px;
+      margin: 32px 0;
+    }
+    & img {
+      position: absolute;
+      right: 72px;
+      bottom: -61.74px;
+    }
+    & button {
+      width: 190px;
+    }
+  }
+}
+footer {
+  margin: 0 auto;
+  margin-top: 60.03px;
+  margin-bottom: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 116px;
+  height: 102.22px;
+  & > img {
+    width: 95.76px;
+    margin: 0 auto;
+  }
+  .social {
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & svg {
+      & path {
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+          fill: var(--Purple);
+        }
+      }
+    }
+  }
+}
